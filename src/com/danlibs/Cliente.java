@@ -6,10 +6,9 @@ public class Cliente {
     private String rg;
     private Endereco endereco;
 
-    public Cliente(String nome, String cpf, String rg, Endereco endereco) {
+    public Cliente(String nome, String cpf, Endereco endereco) {
         this.nome = nome;
         this.cpf = cpf;
-        this.rg = rg;
         this.endereco = endereco;
     }
 
@@ -27,14 +26,6 @@ public class Cliente {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    public String getRg() {
-        return rg;
-    }
-
-    public void setRg(String rg) {
-        this.rg = rg;
     }
 
     public Endereco getEndereco() {
