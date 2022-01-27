@@ -7,11 +7,6 @@ public class Banco {
     private Scanner scan = new Scanner(System.in);
     private ArrayList<Conta> listaContas = new ArrayList<>();
 
-    /*Cliente daniel = new Cliente("Daniel Gomes", "01016071213", "5682775",  new Endereco("Av. Pedro Miranda", 465, "Ap. 603 A", "Pedreira", "Belém", "Pará", "Brasil"));
-    Conta danielConta = new Conta(daniel, Conta.tipoDeConta.valueOf("corrente".toUpperCase()), "1234");
-    Cliente carol = new Cliente("Carolina Quaresma", "01016071213", "5682775",  new Endereco("Av. Pedro Miranda", 465, "Ap. 603 A", "Pedreira", "Belém", "Pará", "Brasil"));
-    Conta carolConta = new Conta(carol, Conta.tipoDeConta.valueOf("poupanca".toUpperCase()), "1234");*/
-
     private void exibirContas() {
         for (int i = 0; i < listaContas.size(); i++) {
             System.out.println(listaContas.get(i).getNumConta() + " - " + listaContas.get(i).getTitular().getNome());
@@ -63,8 +58,6 @@ public class Banco {
     }
 
     public void acessarConta() {
-        /*listaContas.add(danielConta);
-        listaContas.add(carolConta);*/
         clearScreen();
         if (listaContas.isEmpty()) {
             System.out.println("Não há contas cadastradas no banco.");
