@@ -180,6 +180,10 @@ public class Banco {
             int num10 = Integer.parseInt(String.valueOf(cpf.charAt(9)));
             int num11 = Integer.parseInt(String.valueOf(cpf.charAt(10)));
 
+            if ((num1 == num2) && (num2 == num3) && (num3 == num4) && (num4 == num5) && (num5 == num6) && (num6 == num7) && (num7 == num8) && (num8 == num9) && (num9 == num10) && (num10 == num11)) {
+                System.out.println("CPF inválido.");
+                return false;
+            }
             // Verificação do primeiro dos últimos dois dígitos
             int soma1 = num1 * 10 + num2 * 9 + num3 * 8 + num4 * 7 + num5 * 6 + num6 * 5 + num7 * 4 + num8 * 3 + num9 * 2;
             int resto1 = (soma1 * 10) % 11;
