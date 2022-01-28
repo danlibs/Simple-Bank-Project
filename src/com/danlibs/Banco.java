@@ -16,24 +16,23 @@ public class Banco {
     public void criarConta() {
         System.out.println("Informe o nome completo do titular da conta: ");
         String nome = scan.nextLine();
-        System.out.println("Informe o tipo de conta [Corrente/Poupanca]: ");
-        String strTipo = scan.nextLine();
-        while (!strTipo.equalsIgnoreCase("corrente") && !strTipo.equalsIgnoreCase("poupanca")) {
+        boolean repetir;
+        String strTipo;
+        do {
             System.out.println("Informe o tipo de conta [Corrente/Poupanca]: ");
             strTipo = scan.nextLine();
-        }
-        System.out.println("Crie uma senha de 6 dígitos: ");
-        String senha = scan.nextLine();
-        while (!validaSenha(senha)) {
+            repetir = !strTipo.equalsIgnoreCase("corrente") && !strTipo.equalsIgnoreCase("poupanca");
+        } while (repetir);
+        String senha;
+        do {
             System.out.println("Crie uma senha de 6 dígitos: ");
             senha = scan.nextLine();
-        }
-        System.out.println("CPF: ");
-        String cpf = scan.nextLine();
-        while (!validaCpf(cpf)) {
+        } while(!validaSenha(senha));
+        String cpf;
+        do {
             System.out.println("CPF: ");
             cpf = scan.nextLine();
-        }
+        } while (!validaCpf(cpf));
         System.out.println("Endereço (nome da rua, travessa etc.): ");
         String endereco = scan.nextLine();
         System.out.println("Numero: ");
