@@ -1,14 +1,15 @@
 package com.danlibs;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Banco banco = new Banco();
-        int opcao = 0;
+        String opcao = "";
 
-        while (opcao != 3) {
+        while (!opcao.equals("3")) {
             System.out.println("====================================");
             System.out.println("========== BANCO CAPITAL ===========");
             System.out.println("====================================\n");
@@ -17,13 +18,12 @@ public class Main {
             System.out.println("2 - Acessar conta");
             System.out.println("3 - Sair");
             System.out.print("O que você deseja fazer: ");
-            opcao = scan.nextInt();
-            scan.nextLine();
-            if (opcao == 1) {
+            opcao = scan.nextLine();
+            if (opcao.equals("1")) {
                 banco.criarConta();
-            } else if (opcao == 2) {
+            } else if (opcao.equals("2")) {
                 banco.acessarConta();
-            } else if (opcao == 3) {
+            } else if (opcao.equals("3")) {
                 break;
             } else {
                 System.out.println("Opção inválida!");
